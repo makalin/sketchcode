@@ -1,54 +1,67 @@
-# 🎨 SketchCode
-> **From Napkin Sketch to Production-Ready React in Seconds.**
+# SketchCode
 
-**SketchCode** is an open-source, collaborative whiteboard that bridges the gap between design and development. Powered by a real-time **Code-to-UI engine**, it transforms your hand-drawn wireframes into functional React components styled with Tailwind CSS. Stop hand-coding layouts and start sketching your application’s future.
+From napkin sketch to production-ready React in seconds.
 
----
+## Overview
 
-### 📝 Project Description
-**SketchCode** is a collaborative whiteboard for the modern developer. It eliminates design-to-code friction by using a real-time engine to turn wireframe sketches into clean React/Tailwind code. Perfect for rapid prototyping, it allows teams to brainstorm visually and export functional UI instantly. Bridge the gap from "napkin sketch" to "shippable component" in one click.
+SketchCode is a working MVP for a sketch-to-code interface built with Next.js, React, TypeScript, and Tailwind CSS. The current implementation focuses on the editor workflow:
 
----
+- A component block library for common UI sections
+- A drag-and-drop sketch canvas
+- Live preview of the generated layout
+- Real-time JSX/Tailwind export
+- Light, dark, and system theme support
 
-### ✨ Features
-* **Infinite Collaborative Canvas:** A low-latency whiteboard for solo ideation or team sprints.
-* **Sketch-to-Component (S2C):** Draw UI elements (buttons, inputs, cards) and watch them transform into functional React code.
-* **Tailwind CSS Integration:** Automatically generates utility-first styles that match your design intent.
-* **Live Preview:** A side-by-side view showing your rendered UI as you draw or modify the sketch.
-* **Clean Export:** Copy JSX/TSX snippets or export directly to your favorite IDE.
+This repo is structured as a strong starting point for expanding into the larger collaborative whiteboard and AI-assisted layout recognition system described in the original concept.
 
-### 🛠️ Tech Stack
-* **Frontend:** Next.js, React, Canvas API
-* **Styling:** Tailwind CSS
-* **Real-time:** CRDTs for seamless multi-user collaboration
-* **Engine:** Integrated AI for layout recognition and code generation
+## Tech Stack
 
-### 🚀 Getting Started
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/makalin/sketchcode.git
-    ```
-2.  **Install dependencies:**
-    ```bash
-    npm install
-    ```
-3.  **Configure Environment:**
-    Add your AI inference API key to the `.env` file.
-4.  **Launch:**
-    ```bash
-    npm run dev
-    ```
+- Next.js App Router
+- React
+- TypeScript
+- Tailwind CSS
+- `next-themes` for dark mode
 
-### 🏢 Maintained by
-Developed and maintained by **Digital Vision**.
-* **Founder:** Mehmet T. AKALIN
-* **Website:** [dv.com.tr](https://dv.com.tr)
-* **GitHub:** [@makalin](https://github.com/makalin)
-* **LinkedIn:** [in/makalin](https://www.linkedin.com/in/makalin/)
-* **X (Twitter):** [@makalin](https://x.com/makalin)
+## Getting Started
 
-### 🤝 Contributing
-SketchCode is an **Open Source Design** project. We welcome contributions from UI/UX designers, frontend engineers, and AI enthusiasts. Check out our `CONTRIBUTING.md` to get started!
+1. Install dependencies:
 
-### 📄 License
-Distributed under the MIT License.
+```bash
+npm install
+```
+
+2. Start the development server:
+
+```bash
+npm run dev
+```
+
+3. Open `http://localhost:3000`
+
+## Project Structure
+
+```text
+app/
+  globals.css
+  layout.tsx
+  page.tsx
+components/
+  sketch-board-app.tsx
+  theme-provider.tsx
+  theme-toggle.tsx
+lib/
+  sketch-data.ts
+types/
+  sketch.ts
+```
+
+## Roadmap
+
+- Real drawing tools instead of block-based sketching
+- Multiplayer collaboration with CRDT sync
+- AI-powered layout recognition from hand-drawn input
+- Export targets beyond React/Tailwind
+
+## License
+
+MIT
